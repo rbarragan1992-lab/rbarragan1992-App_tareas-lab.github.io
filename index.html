@@ -32,6 +32,7 @@
       <button class="nav-btn" data-view="favorites">⭐ Favoritos</button>
       <button class="nav-btn" data-view="settings">⚙️ Ajustes</button>
       <button class="nav-btn" data-view="help">❓ Ayuda</button>
+      <button class="nav-btn" data-view="dino">🦖 Juega Dino</button>
     </nav>
 
     <main class="panel">
@@ -203,6 +204,36 @@
           </p>
         </div>
       </section>
+    
+      
+      <section id="view-dino" class="view">
+        <div class="list-card dino-card">
+          <div class="list-head">
+            <h3>🦖 Juega Dino</h3>
+            <span class="dino-tag">Sin internet o manual</span>
+          </div>
+          <p class="help">Juego tipo dinosaurio estilo navegador: salta los cactus con ESPACIO, flecha arriba o el botón de saltar. Si se pierde la conexión, aparece automáticamente.</p>
+          <div class="dino-wrapper">
+            <div class="dino-hud">
+              <div>Score: <strong id="dinoScore">0</strong></div>
+              <div>Best: <strong id="dinoBest">0</strong></div>
+            </div>
+            <div id="offlineNotice" class="offline-notice">⚠️ Sin conexión detectada</div>
+            <canvas id="dinoCanvas" width="900" height="260"></canvas>
+            <div id="dinoOverlay" class="dino-overlay">
+              <strong>JUEGA DINO</strong>
+              <span>Presiona Iniciar o usa ESPACIO para saltar</span>
+            </div>
+          </div>
+          <div class="dino-controls">
+            <button id="startDinoBtn" class="primary" type="button">▶ Iniciar / Reiniciar</button>
+            <button id="jumpDinoBtn" type="button">⬆ Saltar</button>
+            <button id="pauseDinoBtn" type="button">⏸ Pausa</button>
+          </div>
+        </div>
+      </section>
+
+
     </main>
 
     <footer class="footer">
